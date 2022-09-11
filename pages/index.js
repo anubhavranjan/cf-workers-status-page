@@ -91,10 +91,10 @@ export default function Index({ config, kvMonitors, kvMonitorsLastUpdate }) {
         })}
         <div className="flex flex-row mt-4 text-sm">
           <div className="copyright info" style={{display:'inline'}}>
-              © {new Date().getFullYear()} made with{" "}  <i className="fa fa-heart" /><a href="https://www.tvshowsreminder.com/" target="_blank">TV Shows Reminder</a> | {" "}
+              © {new Date().getFullYear()} made with{" "}  <i className="fa fa-heart" /> {" "}<a href="https://www.tvshowsreminder.com/" target="_blank">TV Shows Reminder</a> | {" "}
           </div>
             <a className="nav-link ml-1 mr-1" href="https://www.facebook.com/tvshowsreminder">Facebook</a> {" "}
-            <a className="nav-link ml-1 mr-1" href="https://www.twitter.com/tvshowreminder">Twitter</a> {" "}
+            <a className="nav-link" href="https://www.twitter.com/tvshowreminder">Twitter</a> {" "}
         </div>
       </div>
     </div>
