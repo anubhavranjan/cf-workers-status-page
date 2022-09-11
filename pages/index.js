@@ -8,7 +8,7 @@ import MonitorCard from '../src/components/monitorCard'
 import MonitorFilter from '../src/components/monitorFilter'
 import MonitorStatusHeader from '../src/components/monitorStatusHeader'
 import ThemeSwitcher from '../src/components/themeSwitcher'
-import heart from '../public/heart.png'
+import heart from '../../public/heart.png'
 
 const MonitorStore = new Store({
   monitors: config.monitors,
