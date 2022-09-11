@@ -8,6 +8,7 @@ import MonitorCard from '../src/components/monitorCard'
 import MonitorFilter from '../src/components/monitorFilter'
 import MonitorStatusHeader from '../src/components/monitorStatusHeader'
 import ThemeSwitcher from '../src/components/themeSwitcher'
+import heart from '../public/heart.png'
 
 const MonitorStore = new Store({
   monitors: config.monitors,
@@ -89,23 +90,31 @@ export default function Index({ config, kvMonitors, kvMonitorsLastUpdate }) {
           )
         })}
         <div className="flex flex-row justify-between mt-4 text-sm">
-          <div>
-            Powered by{' '}
-            <a href="https://workers.cloudflare.com/" target="_blank">
-              Cloudflare Workers{' '}
-            </a>
-            &{' '}
-            <a href="https://flareact.com/" target="_blank">
-              Flareact{' '}
-            </a>
-          </div>
-          <div>
-            <a
-              href="https://github.com/eidam/cf-workers-status-page"
-              target="_blank"
-            >
-              Get Your Status Page
-            </a>
+          <ul className="nav">
+            <li className="nav-item">
+              <a className="nav-link" href="https://www.facebook.com/tvshowsreminder">
+                Facebook
+              </a>
+            </li>{" "}
+            <li className="nav-item">
+              <a
+                className="nav-link"
+                href="https://www.twitter.com/tvshowreminder"
+              >
+                Twitter
+              </a>
+            </li>{" "}
+            <li className="nav-item">
+              <a className="nav-link" href="https://status.tvshowsreminder.com">
+                Status
+              </a>
+            </li>
+          </ul>
+          <div className="copyright info">
+            © {new Date().getFullYear()} made with{" "} <img alt="heart" src={heart} style={{ height: '160px' }} className="mr-4 ml-4" />
+            <a href="https://www.tvshowsreminder.com/" target="_blank">
+              TV Shows Reminder
+            </a>{"."}
           </div>
         </div>
       </div>
