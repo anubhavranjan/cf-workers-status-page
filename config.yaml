@@ -1,7 +1,7 @@
 settings:
-  title: 'Status Page'
-  url: 'https://status-page.eidam.dev' # used for Slack messages
-  logo: logo-192x192.png # image in ./public/ folder
+  title: 'Status Page | TV Shows Reminder'
+  url: 'https://status.tvshowsreminder.com' # used for Slack messages
+  logo: tv-192.png # image in ./public/ folder
   daysInHistogram: 90 # number of days you want to display in histogram
   collectResponseTimes: true # collects avg response times from CRON locations
 
@@ -15,25 +15,32 @@ settings:
   dayInHistogramNotOperational: ' incident(s)' # xx incident(s) recorded
 
 monitors:
-  - id: workers-cloudflare-com # unique identifier
-    name: workers.cloudflare.com
-    description: 'You write code. They handle the rest.' # default=empty
-    url: 'https://workers.cloudflare.com/' # URL to fetch
+  - id: www-tvsrhowsreminder-com
+    name: TV Shows Reminder
+    description: 'Built for anything connected to the Internet.'
+    url: 'https://www.tvshowsreminder.com'
+    method: GET
+    expectStatus: 200
+    linkable: true # allows the title to be a link, default=true
+
+  - id: tvsr-imgcdn-in # unique identifier
+    name: Image Server
+    description: 'Image Server for TV Shows Reminder' # default=empty
+    url: 'https://tvsr.imgcdn.in/users/tvusr/images/qF8zqS9AkeQE?t[]=resize:height=100&t[]=compress:level=75' # URL to fetch
     method: GET # default=GET
     expectStatus: 200 # operational status, default=200
     followRedirect: false # should fetch follow redirects, default=false
     linkable: false # allows the title to be a link, default=true
 
-  - id: www-cloudflare-com
-    name: www.cloudflare.com
-    description: 'Built for anything connected to the Internet.'
-    url: 'https://www.cloudflare.com'
+  - id: api-tvshowsreminder-com
+    name: API | TV Shows Reminder
+    url: 'https://api.tvshowsreminder.com/api/site/ping'
     method: GET
     expectStatus: 200
-    linkable: true # allows the title to be a link, default=true
-
-  - id: blog-cloudflare-com
-    name: The Cloudflare Blog
-    url: 'https://blog.cloudflare.com/'
+    
+    
+  - id: tvsrstrapi-tvshowsreminder-com
+    name: Database | TV Shows Reminder
+    url: 'https://tvsrbnd.tvshowsreminder.com'
     method: GET
     expectStatus: 200
