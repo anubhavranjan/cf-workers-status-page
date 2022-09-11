@@ -37,10 +37,11 @@ monitors:
     url: 'https://api.tvshowsreminder.com/api/site/ping'
     method: GET
     expectStatus: 200
-    
+    linkable: false # allows the title to be a link, default=true
     
   - id: tvsrstrapi-tvshowsreminder-com
     name: Database | TV Shows Reminder
     url: 'https://tvsrbnd.tvshowsreminder.com'
     method: GET
     expectStatus: 200
+    linkable: false # allows the title to be a link, default=true
