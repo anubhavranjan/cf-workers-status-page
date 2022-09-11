@@ -91,7 +91,7 @@ export default function Index({ config, kvMonitors, kvMonitorsLastUpdate }) {
         })}
         <div className="flex flex-row justify-between mt-4 text-sm">
           <div className="copyright info" style="display:inline">
-              © {new Date().getFullYear()} made with{" "}  <i class="fa fa-heart" /><a href="https://www.tvshowsreminder.com/" target="_blank">TV Shows Reminder</a>
+              © {new Date().getFullYear()} made with{" "}  <i className="fa fa-heart" /><a href="https://www.tvshowsreminder.com/" target="_blank">TV Shows Reminder</a>
           </div>
             <a className="nav-link" href="https://www.facebook.com/tvshowsreminder">Facebook</a> {" "}
             <a className="nav-link" href="https://www.twitter.com/tvshowreminder">Twitter</a> {" "}
