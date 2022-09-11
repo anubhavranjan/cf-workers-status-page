@@ -8,7 +8,6 @@ import MonitorCard from '../src/components/monitorCard'
 import MonitorFilter from '../src/components/monitorFilter'
 import MonitorStatusHeader from '../src/components/monitorStatusHeader'
 import ThemeSwitcher from '../src/components/themeSwitcher'
-import heart from '../../public/heart.png'
 
 const MonitorStore = new Store({
   monitors: config.monitors,
@@ -111,7 +110,7 @@ export default function Index({ config, kvMonitors, kvMonitorsLastUpdate }) {
             </li>
           </ul>
           <div className="copyright info">
-            © {new Date().getFullYear()} made with{" "} <img alt="heart" src={heart} style={{ height: '160px' }} className="mr-4 ml-4" />
+            © {new Date().getFullYear()} made with{" "} <img alt="heart" src="heart.png" style={{ height: '160px' }} className="mr-4 ml-4" />
             <a href="https://www.tvshowsreminder.com/" target="_blank">
               TV Shows Reminder
             </a>{"."}
