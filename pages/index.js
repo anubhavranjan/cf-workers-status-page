@@ -89,32 +89,11 @@ export default function Index({ config, kvMonitors, kvMonitorsLastUpdate }) {
           )
         })}
         <div className="flex flex-row justify-between mt-4 text-sm">
-          <ul className="nav">
-            <li className="nav-item">
-              <a className="nav-link" href="https://www.facebook.com/tvshowsreminder">
-                Facebook
-              </a>
-            </li>{" "}
-            <li className="nav-item">
-              <a
-                className="nav-link"
-                href="https://www.twitter.com/tvshowreminder"
-              >
-                Twitter
-              </a>
-            </li>{" "}
-            <li className="nav-item">
-              <a className="nav-link" href="https://status.tvshowsreminder.com">
-                Status
-              </a>
-            </li>
-          </ul>
-          <div className="copyright info">
-            © {new Date().getFullYear()} made with{" "} <img alt="heart" src="heart.png" style={{ height: '160px' }} className="mr-4 ml-4" />
-            <a href="https://www.tvshowsreminder.com/" target="_blank">
-              TV Shows Reminder
-            </a>{"."}
+          <div className="copyright info" style="display:inline">
+              © {new Date().getFullYear()} made with{" "}  <i class="fa fa-heart" /><a href="https://www.tvshowsreminder.com/" target="_blank">TV Shows Reminder</a>
           </div>
+            <a className="nav-link" href="https://www.facebook.com/tvshowsreminder">Facebook</a> {" "}
+            <a className="nav-link" href="https://www.twitter.com/tvshowreminder">Twitter</a> {" "}
         </div>
       </div>
     </div>
